@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="CR10S" version="2020-04-10 16:50:55" app="S3D-Software 4.1.2">
+<profile name="CR10S" version="2020-05-03 00:03:33" app="S3D-Software 4.1.2">
   <baseProfile>Creality CR-10</baseProfile>
   <printMaterial>PETG</printMaterial>
   <printQuality>Medium</printQuality>
@@ -11,10 +11,10 @@
     <width>0.48</width>
     <extrusionMultiplier>1</extrusionMultiplier>
     <useRetract>1</useRetract>
-    <retractionDistance>4</retractionDistance>
-    <extraRestartDistance>0</extraRestartDistance>
-    <retractionZLift>0.6</retractionZLift>
-    <retractionSpeed>2400</retractionSpeed>
+    <retractionDistance>4.2</retractionDistance>
+    <extraRestartDistance>-0.1</extraRestartDistance>
+    <retractionZLift>0.2</retractionZLift>
+    <retractionSpeed>2160</retractionSpeed>
     <useCoasting>0</useCoasting>
     <coastingDistance>0.24</coastingDistance>
     <useWipe>0</useWipe>
@@ -46,7 +46,7 @@
   <skirtExtruder>0</skirtExtruder>
   <skirtLayers>1</skirtLayers>
   <skirtOutlines>3</skirtOutlines>
-  <skirtOffset>3</skirtOffset>
+  <skirtOffset>5</skirtOffset>
   <usePrimePillar>0</usePrimePillar>
   <primePillarExtruder>999</primePillarExtruder>
   <primePillarWidth>12</primePillarWidth>
@@ -62,7 +62,7 @@
   <infillExtruder>0</infillExtruder>
   <internalInfillPattern>Triangular</internalInfillPattern>
   <externalInfillPattern>Rectilinear</externalInfillPattern>
-  <infillPercentage>18</infillPercentage>
+  <infillPercentage>17</infillPercentage>
   <outlineOverlapPercentage>50</outlineOverlapPercentage>
   <infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
   <minInfillLength>4</minInfillLength>
@@ -72,14 +72,14 @@
   <externalInfillAngles>45,-45</externalInfillAngles>
   <generateSupport>1</generateSupport>
   <supportExtruder>0</supportExtruder>
-  <supportInfillPercentage>18</supportInfillPercentage>
-  <supportExtraInflation>2</supportExtraInflation>
+  <supportInfillPercentage>16</supportInfillPercentage>
+  <supportExtraInflation>1</supportExtraInflation>
   <supportBaseLayers>1</supportBaseLayers>
   <denseSupportExtruder>0</denseSupportExtruder>
-  <denseSupportLayers>0</denseSupportLayers>
-  <denseSupportInfillPercentage>50</denseSupportInfillPercentage>
+  <denseSupportLayers>3</denseSupportLayers>
+  <denseSupportInfillPercentage>45</denseSupportInfillPercentage>
   <supportLayerInterval>1</supportLayerInterval>
-  <supportHorizontalPartOffset>0.34</supportHorizontalPartOffset>
+  <supportHorizontalPartOffset>0.35</supportHorizontalPartOffset>
   <supportUpperSeparationLayers>2</supportUpperSeparationLayers>
   <supportLowerSeparationLayers>1</supportLowerSeparationLayers>
   <supportType>1</supportType>
@@ -96,21 +96,17 @@
     <temperatureNumber>0</temperatureNumber>
     <isHeatedBed>0</isHeatedBed>
     <stabilizeAtStartup>1</stabilizeAtStartup>
-    <setpoint layer="1" temperature="238"/>
-    <setpoint layer="10" temperature="242"/>
+    <setpoint layer="1" temperature="226"/>
   </temperatureController>
   <fanSpeed>
     <setpoint layer="1" speed="0"/>
-    <setpoint layer="2" speed="0"/>
-    <setpoint layer="3" speed="0"/>
     <setpoint layer="4" speed="10"/>
-    <setpoint layer="5" speed="20"/>
-    <setpoint layer="6" speed="30"/>
+    <setpoint layer="6" speed="15"/>
   </fanSpeed>
   <blipFanToFullPower>0</blipFanToFullPower>
   <adjustSpeedForCooling>1</adjustSpeedForCooling>
   <minSpeedLayerTime>30</minSpeedLayerTime>
-  <minCoolingSpeedSlowdown>40</minCoolingSpeedSlowdown>
+  <minCoolingSpeedSlowdown>50</minCoolingSpeedSlowdown>
   <increaseFanForCooling>1</increaseFanForCooling>
   <minFanLayerTime>20</minFanLayerTime>
   <maxCoolingFanSpeed>50</maxCoolingFanSpeed>
@@ -155,14 +151,14 @@
   <exportFileFormat>gcode</exportFileFormat>
   <celebration>0</celebration>
   <celebrationSong>Star Wars</celebrationSong>
-  <postProcessing></postProcessing>
+  <postProcessing>curl -k -H &quot;X-Api-Key: 103FFD1DCE004E9DB8D66D1EE6221388&quot; -F &quot;select=false&quot; -F &quot;print=false&quot; -F &quot;file=@[output_filepath]&quot; &quot;http://octopi:5000/api/files/local&quot; {STRIP &quot;; postProcessing&quot;}</postProcessing>
   <defaultSpeed>3900</defaultSpeed>
-  <outlineUnderspeed>0.56</outlineUnderspeed>
-  <solidInfillUnderspeed>0.68</solidInfillUnderspeed>
-  <supportUnderspeed>0.68</supportUnderspeed>
+  <outlineUnderspeed>0.6</outlineUnderspeed>
+  <solidInfillUnderspeed>0.7</solidInfillUnderspeed>
+  <supportUnderspeed>0.7</supportUnderspeed>
   <rapidXYspeed>6000</rapidXYspeed>
   <rapidZspeed>1002</rapidZspeed>
-  <minBridgingArea>50</minBridgingArea>
+  <minBridgingArea>22</minBridgingArea>
   <bridgingExtraInflation>0</bridgingExtraInflation>
   <bridgingExtrusionMultiplier>0.9</bridgingExtrusionMultiplier>
   <bridgingSpeedMultiplier>1</bridgingSpeedMultiplier>
@@ -170,7 +166,7 @@
   <fixedBridgingAngle>0</fixedBridgingAngle>
   <applyBridgingToPerimeters>1</applyBridgingToPerimeters>
   <filamentDiameters>1.75|1.75|1.75|1.75|1.75|1.75</filamentDiameters>
-  <filamentPricesPerKg>18|46|46|46|46|46</filamentPricesPerKg>
+  <filamentPricesPerKg>22|46|46|46|46|46</filamentPricesPerKg>
   <filamentDensities>1.25|1.25|1.25|1.25|1.25|1.25</filamentDensities>
   <useMinPrintHeight>0</useMinPrintHeight>
   <minPrintHeight>0</minPrintHeight>
@@ -187,7 +183,7 @@
   <retractWhileWiping>1</retractWhileWiping>
   <onlyWipeOutlines>1</onlyWipeOutlines>
   <avoidCrossingOutline>1</avoidCrossingOutline>
-  <maxMovementDetourFactor>3</maxMovementDetourFactor>
+  <maxMovementDetourFactor>5</maxMovementDetourFactor>
   <toolChangeRetractionDistance>8</toolChangeRetractionDistance>
   <toolChangeExtraRestartDistance>-0.5</toolChangeExtraRestartDistance>
   <toolChangeRetractionSpeed>3600</toolChangeRetractionSpeed>
@@ -212,8 +208,8 @@
     <topSolidLayers>6</topSolidLayers>
     <bottomSolidLayers>5</bottomSolidLayers>
     <skirtLayers>1</skirtLayers>
-    <infillPercentage>18</infillPercentage>
-    <supportInfillPercentage>18</supportInfillPercentage>
+    <infillPercentage>17</infillPercentage>
+    <supportInfillPercentage>16</supportInfillPercentage>
   </autoConfigureQuality>
   <autoConfigureQuality name="High">
     <layerHeight>0.1</layerHeight>
@@ -247,18 +243,32 @@
       <temperatureNumber>0</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="238"/>
-      <setpoint layer="10" temperature="242"/>
+      <setpoint layer="1" temperature="226"/>
     </temperatureController>
     <globalBedTemperature>65</globalBedTemperature>
     <globalExtrusionMultiplier>1</globalExtrusionMultiplier>
     <fanSpeed>
       <setpoint layer="1" speed="0"/>
-      <setpoint layer="2" speed="0"/>
-      <setpoint layer="3" speed="0"/>
       <setpoint layer="4" speed="10"/>
-      <setpoint layer="5" speed="20"/>
-      <setpoint layer="6" speed="30"/>
+      <setpoint layer="6" speed="15"/>
+    </fanSpeed>
+  </autoConfigureMaterial>
+  <autoConfigureMaterial name="PLA">
+    <temperatureController name="Primary Extruder">
+      <temperatureNumber>0</temperatureNumber>
+      <isHeatedBed>0</isHeatedBed>
+      <stabilizeAtStartup>1</stabilizeAtStartup>
+      <setpoint layer="1" temperature="215"/>
+      <setpoint layer="2" temperature="210"/>
+    </temperatureController>
+    <globalBedTemperature>55</globalBedTemperature>
+    <globalExtrusionMultiplier>1</globalExtrusionMultiplier>
+    <fanSpeed>
+      <setpoint layer="1" speed="30"/>
+      <setpoint layer="2" speed="30"/>
+      <setpoint layer="3" speed="30"/>
+      <setpoint layer="4" speed="40"/>
+      <setpoint layer="5" speed="60"/>
     </fanSpeed>
   </autoConfigureMaterial>
 </profile>
